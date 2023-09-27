@@ -1,0 +1,86 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap");
+
+/* 
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+:root {
+  --white: #fff;
+  --black: #171718;
+  --black-border: #26292d;
+  --purple: #5c62ec;
+
+  --dark-bg: var(--black);
+  --dark-border: var(--black-border);
+  --header-text: var(--white);
+  --accent: var(--purple);
+}
+
+html,
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Used for reference. Delete after development. */
+* {
+  border: 1px solid red;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+/* Navigation */
+.nav {
+  padding: 20px 0;
+  color: var(--header-text);
+  background-color: var(--dark-bg);
+  border-bottom: 1px solid var(--black-border);
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 35px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--header-text);
+  letter-spacing: 0.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-list__link {
+  color: var(--header-text);
+}
+
+.nav-list__link--active {
+  position: relative;
+}
+
+.nav-list__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+}
