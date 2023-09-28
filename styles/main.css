@@ -12,6 +12,7 @@ font-family: 'Poppins', sans-serif;
   --black-border: #26292d;
   --purple: #5c62ec;
 
+  --txt-clr: var(--black);
   --dark-bg: var(--black);
   --dark-border: var(--black-border);
   --header-text: var(--white);
@@ -21,6 +22,8 @@ font-family: 'Poppins', sans-serif;
 html,
 body {
   font-family: "DM Sans", sans-serif;
+  letter-spacing: -0.5px;
+  color: var(--txt-clr);
 }
 
 /* Used for reference. Delete after development. */
@@ -53,9 +56,9 @@ body {
 
 .logo {
   font-size: 24px;
-  color: var(--header-text);
   letter-spacing: 0.1rem;
   font-family: "Poppins", sans-serif;
+  color: var(--header-text);
 }
 
 .nav-list {
@@ -87,17 +90,45 @@ body {
 
 /* Header */
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 695px;
+  text-align: center;
+  padding: 40px 0;
   color: var(--header-text);
   background-color: var(--dark-bg);
 }
 
 .header__wrapper {
+  max-width: 660px;
+  padding: 0 15px;
 }
 
 .header__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.header__title strong {
+  font-size: 40px;
+}
+
+.header__title span {
+  color: var(--accent);
 }
 
 .header__text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.header__text p + p {
+  margin-top: 1em;
 }
 
 .btn {
