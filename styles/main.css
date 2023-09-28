@@ -71,6 +71,11 @@ body {
 
 .nav-list__link {
   color: var(--header-text);
+  transition: opacity 0.3s ease-in;
+}
+
+.nav-list__link:hover {
+  opacity: 0.8;
 }
 
 .nav-list__link--active {
@@ -98,6 +103,10 @@ body {
   padding: 40px 0;
   color: var(--header-text);
   background-color: var(--dark-bg);
+  background-image: url("../img/projects/header-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .header__wrapper {
@@ -132,4 +141,24 @@ body {
 }
 
 .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--accent);
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  scale: 0.98;
 }
