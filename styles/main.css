@@ -84,3 +84,21 @@ body {
   width: 100%;
   background-color: var(--accent);
 }
+
+/* Header */
+.header {
+  color: var(--header-text);
+  background-color: var(--dark-bg);
+}
+
+.header__wrapper {
+}
+
+.header__title {
+}
+
+.header__text {
+}
+
+.btn {
+}
