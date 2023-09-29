@@ -21,6 +21,9 @@ font-family: 'Poppins', sans-serif;
 
 html,
 body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "DM Sans", sans-serif;
   letter-spacing: -0.5px;
   color: var(--txt-clr);
@@ -258,12 +261,31 @@ body {
 
 /* Content List */
 .content-list {
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 30px;
+  margin: 0 auto;
 }
+
+.content-list a {
+  color: var(--accent);
+}
+
 .content-list__item {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.content-list__item p + p {
+  margin-top: 1em;
 }
 
 /* Footer */
 .footer {
+  margin-top: auto;
   padding: 65px 0;
   color: var(--header-text);
   background-color: var(--dark-bg);
