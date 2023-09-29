@@ -27,14 +27,18 @@ body {
 }
 
 /* Used for reference. Delete after development. */
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 .container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+}
+
+.none {
+  display: none !important;
 }
 
 /* Navigation */
@@ -164,6 +168,24 @@ body {
   scale: 0.98;
 }
 
+/* Button Outline */
+.btn-outline {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  color: var(--txt-clr);
+  background-color: transparent;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-outline:hover {
+  opacity: 0.8;
+}
+
 /* General */
 .section {
   padding: 65px 0;
@@ -196,9 +218,62 @@ body {
   border-radius: 5px 5px 0 0;
 }
 .project__title {
-  padding: 0 20px;
+  padding: 15px 20px;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.4;
   color: var(--txt-clr);
+}
+
+/* Project details */
+.project-details {
+  margin: 0 auto;
+  max-width: 865px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-details__cover {
+  max-width: 100%;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.project-details__desc {
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  padding: 65px 0;
+  color: var(--header-text);
+  background-color: var(--dark-bg);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 27px;
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.copyright p + p {
+  margin-top: 1em;
 }
