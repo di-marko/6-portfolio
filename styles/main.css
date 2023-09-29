@@ -31,6 +31,7 @@ body {
   border: 1px solid red;
 } */
 
+/* General */
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -39,6 +40,27 @@ body {
 
 .none {
   display: none !important;
+}
+
+.title-1 {
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--accent);
+  text-align: center;
+}
+
+.title-2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.section {
+  padding: 65px 0;
 }
 
 /* Navigation */
@@ -186,20 +208,6 @@ body {
   opacity: 0.8;
 }
 
-/* General */
-.section {
-  padding: 65px 0;
-}
-
-.title-1 {
-  margin-bottom: 20px;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--accent);
-  text-align: center;
-}
-
 /* Projects */
 .projects {
   display: flex;
@@ -246,6 +254,12 @@ body {
   font-size: 24px;
   line-height: 1.4;
   margin-bottom: 30px;
+}
+
+/* Content List */
+.content-list {
+}
+.content-list__item {
 }
 
 /* Footer */
