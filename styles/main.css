@@ -144,7 +144,7 @@ body {
 }
 
 .header__title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1.4;
   font-family: "DM Sans", sans-serif;
@@ -152,7 +152,7 @@ body {
 }
 
 .header__title strong {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .header__title span {
@@ -312,4 +312,48 @@ body {
 
 .copyright p + p {
   margin-top: 1em;
+}
+
+@media (max-width: 620px) {
+  .header {
+    min-height: unset;
+  }
+  .header__title {
+    font-size: 24px;
+  }
+  .header__title strong {
+    font-size: 24px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  .section {
+    padding: 35px 0;
+  }
+  .title-1 {
+    margin-bottom: 15px;
+    font-size: 36px;
+  }
+  .title-2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .project__title {
+    font-size: 20px;
+  }
+  .project-details__desc {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .content-list__item {
+    row-gap: 16px;
+    font-size: 16px;
+  }
+  .footer {
+    padding: 35px 0;
+  }
+  .social__item {
+    width: 24px;
+  }
 }
