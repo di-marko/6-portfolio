@@ -17,16 +17,38 @@ font-family: 'Poppins', sans-serif;
   --dark-border: var(--black-border);
   --header-text: var(--white);
   --accent: var(--purple);
+
+  /* Light mode */
+  --page-bg: var(--white);
+  --txt-clr: var(--black);
+  --title-1: var(--accent);
+  --project-card-bg: var(--white);
+  --project-card-txt: var(--black);
+  --shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+  --btn-outline-clr: var(--txt-clr);
+  --btn-outline-bg: var(--white);
+  --btn-outline-border: var(--black);
+}
+
+/* Dark Mode */
+.dark {
+  --page-bg: var(--black);
+  --txt-clr: var(--white);
+  --title-1: var(--white);
+  --project-card-bg: var(--black);
+  --project-card-txt: var(--white);
+  --shadow: 2px 2px 2px 2px rgba(100, 100, 100, 0.5);
 }
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "DM Sans", sans-serif;
   letter-spacing: -0.5px;
   color: var(--txt-clr);
+  background-color: var(--page-bg);
 }
 
 /* Used for reference. Delete after development. */
@@ -46,11 +68,11 @@ body {
 }
 
 .title-1 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.4;
-  color: var(--accent);
+  color: var(--title-1);
   text-align: center;
 }
 
@@ -76,7 +98,7 @@ body {
 
 .nav-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   column-gap: 35px;
   row-gap: 15px;
@@ -84,6 +106,7 @@ body {
 }
 
 .logo {
+  margin-right: auto;
   font-size: 24px;
   letter-spacing: 0.1rem;
   font-family: "Poppins", sans-serif;
@@ -120,6 +143,41 @@ body {
   height: 2px;
   width: 100%;
   background-color: var(--accent);
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  order: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 51px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #272727;
+}
+
+.dark-mode-btn::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left 0.2s ease-in;
+}
+
+.dark-mode-btn--active::before {
+  left: 26px;
+}
+
+.dark-mode-btn__icon {
+  position: relative;
+  z-index: 1;
 }
 
 /* Header */
@@ -201,10 +259,10 @@ body {
   align-items: center;
   padding: 12px 20px;
   border-radius: 5px;
-  border: 1px solid var(--black);
-  color: var(--txt-clr);
-  background-color: transparent;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--btn-outline-border);
+  color: var(--btn-outline-clr);
+  background-color: var(--btn-outline-bg);
+  box-shadow: var(--shadow);
 }
 
 .btn-outline:hover {
@@ -222,8 +280,8 @@ body {
 .project {
   max-width: 360px;
   border-radius: 5px;
-  background-color: var(--white);
-  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+  background-color: var(--project-card-bg);
+  box-shadow: var(--shadow);
 }
 .project__img {
   border-radius: 5px 5px 0 0;
@@ -233,7 +291,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--txt-clr);
+  color: var(--project-card-txt);
 }
 
 /* Project details */
@@ -250,7 +308,7 @@ body {
   max-width: 100%;
   margin-bottom: 40px;
   border-radius: 5px;
-  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow);
 }
 
 .project-details__desc {
@@ -323,6 +381,12 @@ body {
   }
   .header__title strong {
     font-size: 24px;
+  }
+  .nav-row {
+    justify-content: space-between;
+  }
+  .dark-mode-btn {
+    order: 0;
   }
   .btn {
     font-size: 14px;
