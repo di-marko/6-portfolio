@@ -9,18 +9,14 @@ font-family: 'Poppins', sans-serif;
 :root {
   --white: #fff;
   --black: #171718;
-  --black-border: #26292d;
-  --purple: #5c62ec;
-
+  --black-border: #ffaa00;
+  --peach: #ff565e;
   --txt-clr: var(--black);
   --dark-bg: var(--black);
   --dark-border: var(--black-border);
   --header-text: var(--white);
-  --accent: var(--purple);
-
-  /* Light mode */
+  --accent: var(--peach);
   --page-bg: var(--white);
-  --txt-clr: var(--black);
   --title-1: var(--accent);
   --project-card-bg: var(--white);
   --project-card-txt: var(--black);
